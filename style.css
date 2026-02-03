@@ -1,0 +1,157 @@
+/* Basic Styling Elements */
+body {
+      box-sizing: border-box;
+}    
+
+:root {
+    --aqua: #00CFFD;
+    --yellow: #FFD300;
+    --black: #0A0A0A;
+    --charcoal: #1E1E1E;
+    --white: #FFFFFF;
+}
+    
+/* Basic Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+html, body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* headings & Colouring */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+    
+.glow-aqua {
+    box-shadow: 0 0 30px rgba(0, 207, 253, 0.4);
+}
+    
+.glow-yellow {
+    box-shadow: 0 0 20px rgba(255, 211, 0, 0.5);
+}
+    
+.btn-yellow {
+    background: linear-gradient(135deg, #FFD300 0%, #FFA500 100%);
+    transition: all 0.3s ease;
+}
+    
+.btn-yellow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 211, 0, 0.4);
+}
+    
+.card-hover {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+    
+.card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 207, 253, 0.2);
+}
+    
+.water-bg {
+    background: 
+    radial-gradient(ellipse at 20% 80%, rgba(0, 207, 253, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 207, 253, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 207, 253, 0.05) 0%, transparent 70%);
+}
+    
+.foam-overlay {
+    background: 
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(255,255,255,0.08) 0%, transparent 25%),
+    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.06) 0%, transparent 30%);
+}
+    
+@keyframes ripple {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(2); opacity: 0; }
+}
+    
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+    
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+    
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+    
+.shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+    
+.progress-bar {
+    background: linear-gradient(90deg, #00CFFD 0%, #00A8CC 100%);
+    transition: width 1s ease-out;
+}
+    
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+    
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00CFFD;
+    transition: width 0.3s ease;
+}
+    
+.nav-link:hover::after {
+    width: 100%;
+}
+    
+.starburst {
+    position: relative;
+    background: #FFD300;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+    
+.input-glow:focus {
+    box-shadow: 0 0 20px rgba(0, 207, 253, 0.3);
+    border-color: #00CFFD;
+}
+    
+.glass-card {
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 207, 253, 0.2);
+}
+    
+.section-hidden {
+    display: none;
+}
+    
+.section-visible {
+    display: block;
+}
+    
+.price-tag {
+    background: linear-gradient(135deg, #FFD300 0%, #FFA500 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+}
+    
+.water-drop {
+    position: absolute;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), rgba(0, 207, 253, 0.6));
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
