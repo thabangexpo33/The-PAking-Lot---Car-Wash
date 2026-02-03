@@ -1,0 +1,50 @@
+{
+  "persistence_enabled": true,
+  "app_name": "The Parking Lot Car Wash",
+  "avoids_browser_dialogs": true,
+  "avoids_viewport_units": true,
+  "verified_data_sdk_usage": true,
+  "verified_editable_features_usage": true,
+  "data_paradigm": "B",
+  "schema": {
+    "booking_id": "string",
+    "name": "string",
+    "email": "string",
+    "phone": "string",
+    "vehicle_type": "string",
+    "address": "string",
+    "date": "string",
+    "time": "string",
+    "boot_addon": "boolean",
+    "total_price": "string",
+    "status": "string",
+    "created_at": "string"
+  },
+  "edit_panel": {
+    "hero_label": {
+      "type": "label",
+      "text": "Hero Section",
+      "size": "large"
+    },
+    "hero_headline": {
+      "type": "text_input",
+      "label": "Main Headline",
+      "placeholder": "Premium Mobile Car Wash Services"
+    },
+    "hero_subtext": {
+      "type": "text_input",
+      "label": "Subtext",
+      "placeholder": "We bring the shine to your driveway."
+    },
+    "promo_label": {
+      "type": "label",
+      "text": "Promotion",
+      "size": "medium"
+    },
+    "promo_text": {
+      "type": "text_input",
+      "label": "Promo Badge Text",
+      "placeholder": "Wash 5+ Times & Get 10% OFF"
+    }
+  }
+}
