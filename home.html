@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://www.the-parking-lot.co.za</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<!-- Body Elements -->
+ <body class="h-full bg-[#0A0A0A] text-white overflow-x-hidden">
+  <div id="app-wrapper" class="h-full w-full overflow-auto"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-[#00CFFD]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex items-center justify-between h-16 sm:h-20"><!-- Logo -->
+      <div class="flex items-center gap-2 sm:gap-3 cursor-pointer" onclick="showSection('home')">
+       <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#00CFFD] to-[#0088AA] flex items-center justify-center glow-aqua">
+        <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="#0A0A0A" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+        </svg>
+       </div>
+       <div>
+        <h1 class="text-base sm:text-lg font-extrabold text-white leading-tight">THE PARKING LOT</h1>
+        <p class="text-[10px] sm:text-xs text-[#00CFFD] font-medium tracking-wider">CAR WASH</p>
+       </div>
+      </div><!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8"><button onclick="showSection('home')" class="nav-link text-white hover:text-[#00CFFD] font-medium">Home</button> <button onclick="showSection('services')" class="nav-link text-white hover:text-[#00CFFD] font-medium">Services</button> <button onclick="showSection('tracking')" class="nav-link text-white hover:text-[#00CFFD] font-medium">Track Service</button> <button onclick="showSection('account')" class="nav-link text-white hover:text-[#00CFFD] font-medium">Account</button> <button onclick="showSection('careers')" class="nav-link text-white hover:text-[#00CFFD] font-medium">Careers</button> <button onclick="showSection('booking')" class="btn-yellow px-6 py-2 rounded-full font-bold text-[#0A0A0A] uppercase text-sm">Book Now</button>
+      </div><!-- Mobile Menu Button --> <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-white">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div><!-- Mobile Navigation -->
+     <div id="mobileMenu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col gap-3"><button onclick="showSection('home'); toggleMobileMenu()" class="text-left py-2 text-white hover:text-[#00CFFD] font-medium">Home</button> <button onclick="showSection('services'); toggleMobileMenu()" class="text-left py-2 text-white hover:text-[#00CFFD] font-medium">Services</button> <button onclick="showSection('tracking'); toggleMobileMenu()" class="text-left py-2 text-white hover:text-[#00CFFD] font-medium">Track Service</button> <button onclick="showSection('account'); toggleMobileMenu()" class="text-left py-2 text-white hover:text-[#00CFFD] font-medium">Account</button> <button onclick="showSection('careers'); toggleMobileMenu()" class="text-left py-2 text-white hover:text-[#00CFFD] font-medium">Careers</button> <button onclick="showSection('booking'); toggleMobileMenu()" class="btn-yellow px-6 py-2 rounded-full font-bold text-[#0A0A0A] uppercase text-sm text-center mt-2">Book Now</button>
+      </div>
+     </div>
+    </div>
+   </nav><!-- Main Content -->
+   <main class="pt-16 sm:pt-20"><!-- HOME SECTION -->
+    <section id="home" class="section-visible"><!-- Hero -->
+     <div class="relative min-h-[600px] sm:min-h-[700px] water-bg foam-overlay overflow-hidden"><!-- Animated Water Drops -->
+      <div class="water-drop w-4 h-5 top-20 left-[10%] animate-float" style="animation-delay: 0s;"></div>
+      <div class="water-drop w-3 h-4 top-40 left-[25%] animate-float" style="animation-delay: 0.5s;"></div>
+      <div class="water-drop w-5 h-6 top-32 right-[15%] animate-float" style="animation-delay: 1s;"></div>
+      <div class="water-drop w-2 h-3 top-60 right-[30%] animate-float" style="animation-delay: 1.5s;"></div><!-- Hero Car SVG -->
+      <div class="absolute inset-0 flex items-center justify-center opacity-20">
+       <svg class="w-full max-w-4xl" viewbox="0 0 800 400" fill="none"><ellipse cx="400" cy="350" rx="350" ry="30" fill="url(#shadowGrad)" /> <path d="M150 280 L200 180 Q250 140 400 140 Q550 140 600 180 L650 280 Q660 320 640 340 L160 340 Q140 320 150 280Z" fill="#1E1E1E" stroke="#00CFFD" stroke-width="2" /> <path d="M220 180 Q260 150 400 150 Q540 150 580 180 L560 220 L240 220 Z" fill="#00CFFD" fill-opacity="0.3" /> <circle cx="220" cy="320" r="40" fill="#1E1E1E" stroke="#00CFFD" stroke-width="3" /> <circle cx="220" cy="320" r="25" fill="#0A0A0A" /> <circle cx="580" cy="320" r="40" fill="#1E1E1E" stroke="#00CFFD" stroke-width="3" /> <circle cx="580" cy="320" r="25" fill="#0A0A0A" /> <defs>
+         <radialgradient id="shadowGrad">
+          <stop offset="0%" stop-color="#00CFFD" stop-opacity="0.3" />
+          <stop offset="100%" stop-color="#00CFFD" stop-opacity="0" />
+         </radialgradient>
+        </defs>
+       </svg>
+      </div><!-- Foam Bubbles -->
+      <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-white/5 blur-xl animate-float"></div>
+      <div class="absolute bottom-1/3 right-1/4 w-24 h-24 rounded-full bg-white/5 blur-xl animate-float" style="animation-delay: 1s;"></div><!-- Hero Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-32 pb-16">
+       <div class="text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00CFFD]/10 border border-[#00CFFD]/30 mb-6"><span class="w-2 h-2 rounded-full bg-[#00CFFD] animate-pulse"></span> <span class="text-[#00CFFD] text-sm font-medium">Mobile Service Available</span>
+        </div>
+        <h1 id="heroHeadline" class="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-tight">Premium Mobile<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00CFFD] to-[#00A8CC]">Car Wash</span> Services</h1>
+        <p id="heroSubtext" class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">We bring the shine to your driveway. Professional detailing, eco-friendly products, and unmatched convenience.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center"><button onclick="showSection('booking')" class="btn-yellow px-10 py-4 rounded-full font-bold text-[#0A0A0A] uppercase text-lg tracking-wide flex items-center gap-3 glow-yellow">
+          <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+          </svg> Book a Wash </button> <button onclick="showSection('tracking')" class="px-10 py-4 rounded-full font-bold text-white uppercase text-lg tracking-wide border-2 border-[#00CFFD] hover:bg-[#00CFFD]/10 transition-all flex items-center gap-3">
+          <svg class="w-6 h-6 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg> Track My Service </button>
+        </div><button onclick="showSection('careers')" class="mt-6 text-[#00CFFD] hover:text-white transition-colors font-medium flex items-center gap-2 mx-auto">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 16H4V8h16v12z" />
+         </svg> Join Our Team – We're Hiring! </button>
+       </div>
+      </div><!-- Bottom Wave -->
+      <div class="absolute bottom-0 left-0 right-0">
+       <svg viewbox="0 0 1440 120" fill="none" class="w-full"><path d="M0 120L48 110C96 100 192 80 288 70C384 60 480 60 576 65C672 70 768 80 864 85C960 90 1056 90 1152 85C1248 80 1344 70 1392 65L1440 60V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0Z" fill="#0A0A0A" />
+       </svg>
+      </div>
+     </div><!-- Features -->
+     <div class="bg-[#0A0A0A] py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">Why Choose Us?</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Experience the difference with our premium car wash services</p>
+       </div>
+       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-card p-6 rounded-2xl card-hover text-center">
+         <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#00CFFD]/20 to-transparent flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l-5.5 9h11L12 2zm0 3.84L13.93 9h-3.87L12 5.84zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM3 21.5h8v-2H3v2zm0-4h8v-2H3v2z" />
+          </svg>
+         </div>
+         <h3 class="text-xl font-bold text-white mb-2">Eco-Friendly</h3>
+         <p class="text-gray-400 text-sm">Biodegradable products safe for your car and the environment</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl card-hover text-center">
+         <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#FFD300]/20 to-transparent flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#FFD300]" fill="currentColor" viewbox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+          </svg>
+         </div>
+         <h3 class="text-xl font-bold text-white mb-2">Quick Service</h3>
+         <p class="text-gray-400 text-sm">Fast, efficient cleaning without compromising quality</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl card-hover text-center">
+         <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#00CFFD]/20 to-transparent flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg>
+         </div>
+         <h3 class="text-xl font-bold text-white mb-2">Professional</h3>
+         <p class="text-gray-400 text-sm">Trained staff delivering consistent, premium results</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl card-hover text-center">
+         <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#FFD300]/20 to-transparent flex items-center justify-center">
+          <svg class="w-8 h-8 text-[#FFD300]" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM4 0h16v2H4zm0 22h16v2H4zm8-10c1.38 0 2.5-1.12 2.5-2.5S13.38 7 12 7s-2.5 1.12-2.5 2.5S10.62 12 12 12zm0 1c-1.63 0-4.88.75-5 2.28V16h10v-.72c-.12-1.53-3.37-2.28-5-2.28z" />
+          </svg>
+         </div>
+         <h3 class="text-xl font-bold text-white mb-2">Mobile Service</h3>
+         <p class="text-gray-400 text-sm">We come to you – home, office, or anywhere convenient</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- SERVICES SECTION -->
+    <section id="services" class="section-hidden">
+     <div class="bg-[#0A0A0A] min-h-screen py-16 sm:py-24 water-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="text-center mb-12">
+        <h2 class="text-4xl sm:text-5xl font-black text-white mb-4">Our Services &amp; Pricing</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Choose the perfect wash package for your vehicle</p>
+       </div><!-- Promo Badge -->
+       <div class="flex justify-center mb-12">
+        <div class="relative">
+         <div class="starburst w-40 h-40 flex items-center justify-center">
+          <div id="promoText" class="text-[#0A0A0A] text-center font-black text-xs leading-tight px-4 relative z-10" style="transform: rotate(0deg);">
+           WASH 5+ TIMES<br>
+           &amp;<br>
+           GET 10% OFF<br>
+           YOUR NEXT WASH!
+          </div>
+         </div>
+         <div class="absolute inset-0 starburst opacity-50 animate-pulse"></div>
+        </div>
+       </div><!-- Pricing Cards -->
+       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"><!-- Sedan Card -->
+        <div class="glass-card rounded-3xl overflow-hidden card-hover">
+         <div class="relative h-48 bg-gradient-to-br from-[#1E1E1E] to-[#0A0A0A] flex items-center justify-center overflow-hidden">
+          <svg class="w-32 h-32 text-[#00CFFD]/30" viewbox="0 0 100 60" fill="currentColor"><path d="M15 45 L25 25 Q35 15 50 15 Q65 15 75 25 L85 45 Q88 52 82 55 L18 55 Q12 52 15 45Z" /> <circle cx="25" cy="50" r="8" fill="#1E1E1E" stroke="currentColor" stroke-width="2" /> <circle cx="75" cy="50" r="8" fill="#1E1E1E" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <div class="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#00CFFD]/20 flex items-center justify-center">
+           <svg class="w-4 h-4 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+           </svg>
+          </div>
+         </div>
+         <div class="p-6">
+          <h3 class="text-2xl font-black text-white mb-2">SEDAN</h3>
+          <div class="space-y-3 mb-6">
+           <div class="flex justify-between items-center"><span class="text-gray-400">Full Wash (Excl. Boot)</span> <span class="text-2xl font-black text-[#FFD300]">R80</span>
+           </div>
+           <div class="flex justify-between items-center"><span class="text-gray-400">Boot Add-On</span> <span class="text-lg font-bold text-[#00CFFD]">+R20</span>
+           </div>
+          </div><button onclick="bookVehicle('Sedan')" class="w-full btn-yellow py-3 rounded-full font-bold text-[#0A0A0A] uppercase">Book Now</button>
+         </div>
+        </div><!-- SUV Card -->
+        <div class="glass-card rounded-3xl overflow-hidden card-hover">
+         <div class="relative h-48 bg-gradient-to-br from-[#1E1E1E] to-[#0A0A0A] flex items-center justify-center overflow-hidden">
+          <svg class="w-36 h-36 text-[#00CFFD]/30" viewbox="0 0 100 70" fill="currentColor"><path d="M10 50 L20 25 Q30 10 50 10 Q70 10 80 25 L90 50 Q95 60 85 63 L15 63 Q5 60 10 50Z" /> <rect x="25" y="18" width="50" height="25" rx="3" fill="#1E1E1E" stroke="currentColor" stroke-width="1" /> <circle cx="22" cy="58" r="10" fill="#1E1E1E" stroke="currentColor" stroke-width="2" /> <circle cx="78" cy="58" r="10" fill="#1E1E1E" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FFD300] text-[#0A0A0A] text-xs font-bold">
+           POPULAR
+          </div>
+         </div>
+         <div class="p-6">
+          <h3 class="text-2xl font-black text-white mb-2">SUV</h3>
+          <div class="space-y-3 mb-6">
+           <div class="flex justify-between items-center"><span class="text-gray-400">Full Wash (Excl. Boot)</span> <span class="text-2xl font-black text-[#FFD300]">R100</span>
+           </div>
+           <div class="flex justify-between items-center"><span class="text-gray-400">Boot Add-On</span> <span class="text-lg font-bold text-[#00CFFD]">+R50</span>
+           </div>
+          </div><button onclick="bookVehicle('SUV')" class="w-full btn-yellow py-3 rounded-full font-bold text-[#0A0A0A] uppercase">Book Now</button>
+         </div>
+        </div><!-- Bakkie Card -->
+        <div class="glass-card rounded-3xl overflow-hidden card-hover">
+         <div class="relative h-48 bg-gradient-to-br from-[#1E1E1E] to-[#0A0A0A] flex items-center justify-center overflow-hidden">
+          <svg class="w-36 h-36 text-[#00CFFD]/30" viewbox="0 0 100 60" fill="currentColor"><path d="M5 45 L15 30 Q20 20 35 20 L35 20 L55 20 L55 45 L95 45 L95 52 L5 52 Z" /> <rect x="55" y="25" width="38" height="20" fill="#1E1E1E" stroke="currentColor" stroke-width="1" /> <circle cx="20" cy="50" r="8" fill="#1E1E1E" stroke="currentColor" stroke-width="2" /> <circle cx="80" cy="50" r="8" fill="#1E1E1E" stroke="currentColor" stroke-width="2" />
+          </svg>
+         </div>
+         <div class="p-6">
+          <h3 class="text-2xl font-black text-white mb-2">BAKKIE</h3>
+          <div class="space-y-3 mb-6">
+           <div class="flex justify-between items-center"><span class="text-gray-400">Full Wash (Incl. Boot)</span> <span class="text-2xl font-black text-[#FFD300]">R120</span>
+           </div>
+           <div class="flex justify-between items-center"><span class="text-gray-400 text-sm">✓ Boot included in price</span>
+           </div>
+          </div><button onclick="bookVehicle('Bakkie')" class="w-full btn-yellow py-3 rounded-full font-bold text-[#0A0A0A] uppercase">Book Now</button>
+         </div>
+        </div><!-- Minibus Card -->
+        <div class="glass-card rounded-3xl overflow-hidden card-hover">
+         <div class="relative h-48 bg-gradient-to-br from-[#1E1E1E] to-[#0A0A0A] flex items-center justify-center overflow-hidden">
+          <svg class="w-36 h-36 text-[#00CFFD]/30" viewbox="0 0 100 60" fill="currentColor"><rect x="5" y="15" width="90" height="35" rx="8" fill="currentColor" /> <rect x="10" y="20" width="15" height="12" rx="2" fill="#1E1E1E" /> <rect x="30" y="20" width="12" height="12" rx="2" fill="#1E1E1E" /> <rect x="47" y="20" width="12" height="12" rx="2" fill="#1E1E1E" /> <rect x="64" y="20" width="12" height="12" rx="2" fill="#1E1E1E" /> <circle cx="20" cy="52" r="8" fill="#1E1E1E" stroke="currentColor" stroke-width="2" /> <circle cx="80" cy="52" r="8" fill="#1E1E1E" stroke="currentColor" stroke-width="2" />
+          </svg>
+         </div>
+         <div class="p-6">
+          <h3 class="text-2xl font-black text-white mb-2">MINIBUS</h3>
+          <div class="space-y-3 mb-6">
+           <div class="flex justify-between items-center"><span class="text-gray-400">Full Wash (Excl. Boot)</span> <span class="text-2xl font-black text-[#FFD300]">R180</span>
+           </div>
+           <div class="flex justify-between items-center"><span class="text-gray-400">Boot Add-On</span> <span class="text-lg font-bold text-[#00CFFD]">+R50</span>
+           </div>
+          </div><button onclick="bookVehicle('Minibus')" class="w-full btn-yellow py-3 rounded-full font-bold text-[#0A0A0A] uppercase">Book Now</button>
+         </div>
+        </div>
+       </div><!-- Additional Info -->
+       <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl text-center">
+         <svg class="w-12 h-12 mx-auto mb-4 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" /> <path d="M12 16.42l-6-3.27V17c0 2.21 2.69 4 6 4s6-1.79 6-4v-3.85l-6 3.27z" />
+         </svg>
+         <h4 class="text-lg font-bold text-white mb-2">Trained Professionals</h4>
+         <p class="text-gray-400 text-sm">All our staff are certified and experienced</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl text-center">
+         <svg class="w-12 h-12 mx-auto mb-4 text-[#FFD300]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+         </svg>
+         <h4 class="text-lg font-bold text-white mb-2">Satisfaction Guaranteed</h4>
+         <p class="text-gray-400 text-sm">Not happy? We'll rewash for free</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl text-center">
+         <svg class="w-12 h-12 mx-auto mb-4 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+         </svg>
+         <h4 class="text-lg font-bold text-white mb-2">We Come to You</h4>
+         <p class="text-gray-400 text-sm">Mobile service at your convenience</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- TRACKING SECTION -->
+    <section id="tracking" class="section-hidden">
+     <div class="bg-[#0A0A0A] min-h-screen py-16 sm:py-24 water-bg">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="text-center mb-12">
+        <h2 class="text-4xl sm:text-5xl font-black text-white mb-4">Track Your Service</h2>
+        <p class="text-gray-400">Monitor your car wash progress in real-time</p>
+       </div><!-- Tracking Input -->
+       <div class="glass-card p-6 sm:p-8 rounded-3xl mb-8">
+        <div class="flex flex-col sm:flex-row gap-4"><input type="text" id="trackingCode" placeholder="Enter your booking code (e.g., PL-12345)" class="flex-1 px-6 py-4 rounded-full bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all"> <button onclick="trackService()" class="btn-yellow px-8 py-4 rounded-full font-bold text-[#0A0A0A] uppercase whitespace-nowrap"> Track Now </button>
+        </div>
+        <div class="mt-4 pt-4 border-t border-[#1E1E1E]"><button onclick="showBookingCodeRecovery()" class="text-[#00CFFD] hover:underline text-sm font-medium flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+          </svg> Can't find your booking code? </button>
+        </div>
+       </div><!-- Demo Tracking Display -->
+       <div id="trackingDisplay" class="hidden">
+        <div class="glass-card p-6 sm:p-8 rounded-3xl">
+         <div class="flex items-center justify-between mb-8">
+          <div>
+           <p class="text-gray-400 text-sm">Booking Code</p>
+           <p id="displayCode" class="text-2xl font-black text-white">PL-12345</p>
+          </div>
+          <div class="text-right">
+           <p class="text-gray-400 text-sm">Vehicle</p>
+           <p id="displayVehicle" class="text-xl font-bold text-[#00CFFD]">SUV</p>
+          </div>
+         </div><!-- Progress Steps -->
+         <div class="relative mb-8">
+          <div class="absolute top-5 left-0 right-0 h-1 bg-[#1E1E1E] rounded-full"></div>
+          <div id="progressLine" class="absolute top-5 left-0 h-1 bg-gradient-to-r from-[#00CFFD] to-[#00A8CC] rounded-full transition-all duration-1000" style="width: 50%;"></div>
+          <div class="relative flex justify-between">
+           <div class="text-center">
+            <div id="step1" class="w-10 h-10 rounded-full bg-[#00CFFD] flex items-center justify-center mx-auto mb-2 glow-aqua">
+             <svg class="w-5 h-5 text-[#0A0A0A]" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+             </svg>
+            </div>
+            <p class="text-xs sm:text-sm text-[#00CFFD] font-medium">Checked In</p>
+           </div>
+           <div class="text-center">
+            <div id="step2" class="w-10 h-10 rounded-full bg-[#00CFFD] flex items-center justify-center mx-auto mb-2 glow-aqua animate-pulse">
+             <svg class="w-5 h-5 text-[#0A0A0A]" fill="currentColor" viewbox="0 0 24 24"><path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z" />
+             </svg>
+            </div>
+            <p class="text-xs sm:text-sm text-[#00CFFD] font-medium">Washing</p>
+           </div>
+           <div class="text-center">
+            <div id="step3" class="w-10 h-10 rounded-full bg-[#1E1E1E] flex items-center justify-center mx-auto mb-2">
+             <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+             </svg>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-500 font-medium">Polishing</p>
+           </div>
+           <div class="text-center">
+            <div id="step4" class="w-10 h-10 rounded-full bg-[#1E1E1E] flex items-center justify-center mx-auto mb-2">
+             <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+             </svg>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-500 font-medium">Complete</p>
+           </div>
+          </div>
+         </div><!-- Timer -->
+         <div class="text-center p-6 rounded-2xl bg-[#0A0A0A] mb-6">
+          <p class="text-gray-400 mb-2">Estimated Time Remaining</p>
+          <div class="flex items-center justify-center gap-4">
+           <div class="text-center"><span id="timerMinutes" class="text-5xl font-black text-[#00CFFD]">25</span>
+            <p class="text-gray-500 text-sm">Minutes</p>
+           </div><span class="text-4xl text-gray-600">:</span>
+           <div class="text-center"><span id="timerSeconds" class="text-5xl font-black text-[#00CFFD]">00</span>
+            <p class="text-gray-500 text-sm">Seconds</p>
+           </div>
+          </div>
+         </div><!-- Actions -->
+         <div class="flex flex-col sm:flex-row gap-4"><button onclick="refreshTracking()" class="flex-1 py-3 rounded-full border-2 border-[#00CFFD] text-[#00CFFD] font-bold uppercase hover:bg-[#00CFFD]/10 transition-all flex items-center justify-center gap-2">
+           <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
+           </svg> Refresh </button> <button class="flex-1 btn-yellow py-3 rounded-full font-bold text-[#0A0A0A] uppercase flex items-center justify-center gap-2">
+           <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z" />
+           </svg> SMS Updates </button>
+         </div>
+        </div>
+       </div><!-- Estimated Times Info -->
+       <div class="glass-card p-6 sm:p-8 rounded-3xl mt-8">
+        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+         <svg class="w-6 h-6 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+         </svg> Estimated Wash Times</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+         <div class="text-center p-4 rounded-xl bg-[#0A0A0A]">
+          <p class="text-[#FFD300] font-bold text-lg">Sedan</p>
+          <p class="text-white text-sm">10–45 min</p>
+         </div>
+         <div class="text-center p-4 rounded-xl bg-[#0A0A0A]">
+          <p class="text-[#FFD300] font-bold text-lg">SUV</p>
+          <p class="text-white text-sm">10–60 min</p>
+         </div>
+         <div class="text-center p-4 rounded-xl bg-[#0A0A0A]">
+          <p class="text-[#FFD300] font-bold text-lg">Bakkie</p>
+          <p class="text-white text-sm">1 hr 30 min</p>
+         </div>
+         <div class="text-center p-4 rounded-xl bg-[#0A0A0A]">
+          <p class="text-[#FFD300] font-bold text-lg">Minibus</p>
+          <p class="text-white text-sm">1 hr 50 min</p>
+         </div>
+         <div class="text-center p-4 rounded-xl bg-[#0A0A0A]">
+          <p class="text-[#FFD300] font-bold text-lg">Trailer</p>
+          <p class="text-white text-sm">2 hrs</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- ACCOUNT SECTION -->
+    <section id="account" class="section-hidden">
+     <div class="bg-[#0A0A0A] min-h-screen py-16 sm:py-24 water-bg">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8"><!-- Login/Register Toggle -->
+       <div id="authContainer">
+        <div class="text-center mb-8">
+         <h2 class="text-4xl sm:text-5xl font-black text-white mb-4">Welcome Back</h2>
+         <p class="text-gray-400">Sign in to manage your account</p>
+        </div><!-- Tab Toggle -->
+        <div class="flex justify-center mb-8">
+         <div class="inline-flex rounded-full bg-[#1E1E1E] p-1"><button id="loginTab" onclick="switchAuthTab('login')" class="px-6 py-2 rounded-full font-bold text-sm transition-all bg-[#00CFFD] text-[#0A0A0A]">Sign In</button> <button id="registerTab" onclick="switchAuthTab('register')" class="px-6 py-2 rounded-full font-bold text-sm transition-all text-gray-400">Register</button>
+         </div>
+        </div><!-- Login Form -->
+        <div id="loginForm" class="glass-card p-6 sm:p-8 rounded-3xl">
+         <form onsubmit="handleLogin(event)">
+          <div class="space-y-4">
+           <div><label for="loginEmail" class="block text-gray-400 text-sm mb-2">Email Address</label> <input type="email" id="loginEmail" placeholder="you@example.com" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+           <div><label for="loginPassword" class="block text-gray-400 text-sm mb-2">Password</label> <input type="password" id="loginPassword" placeholder="••••••••" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+          </div><button type="submit" class="w-full btn-yellow py-4 rounded-full font-bold text-[#0A0A0A] uppercase mt-6"> Sign In </button> <button type="button" onclick="showForgotPassword()" class="w-full text-[#00CFFD] text-sm mt-4 hover:underline"> Forgot your password? </button>
+         </form>
+        </div><!-- Register Form -->
+        <div id="registerForm" class="glass-card p-6 sm:p-8 rounded-3xl hidden">
+         <form onsubmit="handleRegister(event)">
+          <div class="space-y-4">
+           <div><label for="regName" class="block text-gray-400 text-sm mb-2">Full Name</label> <input type="text" id="regName" placeholder="John Doe" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+           <div><label for="regEmail" class="block text-gray-400 text-sm mb-2">Email Address</label> <input type="email" id="regEmail" placeholder="you@example.com" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+           <div><label for="regPhone" class="block text-gray-400 text-sm mb-2">Phone Number</label> <input type="tel" id="regPhone" placeholder="+27 XX XXX XXXX" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+           <div><label for="regPassword" class="block text-gray-400 text-sm mb-2">Create Password</label> <input type="password" id="regPassword" placeholder="••••••••" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+          </div><button type="submit" class="w-full btn-yellow py-4 rounded-full font-bold text-[#0A0A0A] uppercase mt-6"> Create Account </button>
+         </form>
+        </div>
+       </div><!-- Dashboard (hidden by default) -->
+       <div id="dashboardContainer" class="hidden">
+        <div class="text-center mb-8">
+         <h2 class="text-3xl sm:text-4xl font-black text-white mb-2">Welcome, <span id="userName">John</span>!</h2>
+         <p class="text-gray-400">Manage your car wash experience</p>
+        </div><!-- Quick Actions -->
+        <div class="grid grid-cols-2 gap-4 mb-8"><button onclick="showSection('booking')" class="glass-card p-6 rounded-2xl card-hover text-center">
+          <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-[#FFD300]/20 flex items-center justify-center">
+           <svg class="w-7 h-7 text-[#FFD300]" fill="currentColor" viewbox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+           </svg>
+          </div><p class="font-bold text-white">Book a Wash</p></button> <button onclick="showSection('tracking')" class="glass-card p-6 rounded-2xl card-hover text-center">
+          <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-[#00CFFD]/20 flex items-center justify-center">
+           <svg class="w-7 h-7 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+           </svg>
+          </div><p class="font-bold text-white">Track Service</p></button>
+        </div><!-- Stats -->
+        <div class="glass-card p-6 rounded-2xl mb-6">
+         <h3 class="text-lg font-bold text-white mb-4">Your Stats</h3>
+         <div class="grid grid-cols-3 gap-4 text-center">
+          <div>
+           <p class="text-3xl font-black text-[#FFD300]">4</p>
+           <p class="text-gray-400 text-sm">Total Washes</p>
+          </div>
+          <div>
+           <p class="text-3xl font-black text-[#00CFFD]">1</p>
+           <p class="text-gray-400 text-sm">Until Discount</p>
+          </div>
+          <div>
+           <p class="text-3xl font-black text-white">R480</p>
+           <p class="text-gray-400 text-sm">Total Spent</p>
+          </div>
+         </div>
+        </div><!-- Vehicle Info -->
+        <div class="glass-card p-6 rounded-2xl mb-6">
+         <h3 class="text-lg font-bold text-white mb-4">My Vehicle</h3>
+         <div class="flex items-center gap-4">
+          <div class="w-16 h-16 rounded-xl bg-[#00CFFD]/10 flex items-center justify-center">
+           <svg class="w-10 h-10 text-[#00CFFD]" viewbox="0 0 100 60" fill="currentColor"><path d="M15 45 L25 25 Q35 15 50 15 Q65 15 75 25 L85 45 Q88 52 82 55 L18 55 Q12 52 15 45Z" />
+           </svg>
+          </div>
+          <div>
+           <p class="font-bold text-white">Toyota Corolla</p>
+           <p class="text-gray-400 text-sm">Sedan • White</p>
+          </div><button class="ml-auto text-[#00CFFD] hover:underline text-sm">Edit</button>
+         </div>
+        </div><!-- Recent History -->
+        <div class="glass-card p-6 rounded-2xl mb-6">
+         <h3 class="text-lg font-bold text-white mb-4">Recent Washes</h3>
+         <div class="space-y-3">
+          <div class="flex items-center justify-between p-3 rounded-xl bg-[#0A0A0A]">
+           <div>
+            <p class="font-medium text-white">Full Wash + Boot</p>
+            <p class="text-gray-500 text-xs">Jan 15, 2024</p>
+           </div><span class="text-[#FFD300] font-bold">R100</span>
+          </div>
+          <div class="flex items-center justify-between p-3 rounded-xl bg-[#0A0A0A]">
+           <div>
+            <p class="font-medium text-white">Full Wash</p>
+            <p class="text-gray-500 text-xs">Jan 8, 2024</p>
+           </div><span class="text-[#FFD300] font-bold">R80</span>
+          </div>
+         </div>
+        </div><!-- Logout --> <button onclick="handleLogout()" class="w-full py-3 rounded-full border-2 border-red-500/50 text-red-400 font-bold uppercase hover:bg-red-500/10 transition-all"> Sign Out </button>
+       </div>
+      </div>
+     </div>
+    </section><!-- BOOKING SECTION -->
+    <section id="booking" class="section-hidden">
+     <div class="bg-[#0A0A0A] min-h-screen py-16 sm:py-24 water-bg">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="text-center mb-12">
+        <h2 class="text-4xl sm:text-5xl font-black text-white mb-4">Book Your Wash</h2>
+        <p class="text-gray-400">Schedule a premium car wash at your convenience</p>
+       </div>
+       <div class="glass-card p-6 sm:p-8 rounded-3xl">
+        <form id="bookingForm" onsubmit="handleBooking(event)"><!-- Vehicle Selection -->
+         <div class="mb-6"><label class="block text-gray-400 text-sm mb-3">Select Vehicle Type</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3"><button type="button" onclick="selectVehicle('Sedan')" class="vehicle-btn p-4 rounded-xl border-2 border-[#1E1E1E] hover:border-[#00CFFD] transition-all" data-vehicle="Sedan">
+            <svg class="w-10 h-10 mx-auto text-gray-400" viewbox="0 0 100 60" fill="currentColor"><path d="M15 45 L25 25 Q35 15 50 15 Q65 15 75 25 L85 45 Q88 52 82 55 L18 55 Q12 52 15 45Z" />
+            </svg><p class="text-sm font-medium text-white mt-2">Sedan</p><p class="text-xs text-[#FFD300]">R80</p></button> <button type="button" onclick="selectVehicle('SUV')" class="vehicle-btn p-4 rounded-xl border-2 border-[#1E1E1E] hover:border-[#00CFFD] transition-all" data-vehicle="SUV">
+            <svg class="w-10 h-10 mx-auto text-gray-400" viewbox="0 0 100 70" fill="currentColor"><path d="M10 50 L20 25 Q30 10 50 10 Q70 10 80 25 L90 50 Q95 60 85 63 L15 63 Q5 60 10 50Z" />
+            </svg><p class="text-sm font-medium text-white mt-2">SUV</p><p class="text-xs text-[#FFD300]">R100</p></button> <button type="button" onclick="selectVehicle('Bakkie')" class="vehicle-btn p-4 rounded-xl border-2 border-[#1E1E1E] hover:border-[#00CFFD] transition-all" data-vehicle="Bakkie">
+            <svg class="w-10 h-10 mx-auto text-gray-400" viewbox="0 0 100 60" fill="currentColor"><path d="M5 45 L15 30 Q20 20 35 20 L55 20 L55 45 L95 45 L95 52 L5 52 Z" />
+            </svg><p class="text-sm font-medium text-white mt-2">Bakkie</p><p class="text-xs text-[#FFD300]">R120</p></button> <button type="button" onclick="selectVehicle('Minibus')" class="vehicle-btn p-4 rounded-xl border-2 border-[#1E1E1E] hover:border-[#00CFFD] transition-all" data-vehicle="Minibus">
+            <svg class="w-10 h-10 mx-auto text-gray-400" viewbox="0 0 100 60" fill="currentColor"><rect x="5" y="15" width="90" height="35" rx="8" />
+            </svg><p class="text-sm font-medium text-white mt-2">Minibus</p><p class="text-xs text-[#FFD300]">R180</p></button>
+          </div><input type="hidden" id="selectedVehicle" name="vehicle" required>
+         </div><!-- Boot Add-on -->
+         <div id="bootAddon" class="mb-6 hidden"><label class="flex items-center gap-3 p-4 rounded-xl bg-[#0A0A0A] cursor-pointer hover:bg-[#1E1E1E] transition-all"> <input type="checkbox" id="bootCheckbox" class="w-5 h-5 rounded accent-[#00CFFD]"> <span class="text-white font-medium">Add Boot Cleaning</span> <span id="bootPrice" class="ml-auto text-[#00CFFD] font-bold">+R20</span> </label>
+         </div><!-- Contact Info -->
+         <div class="space-y-4 mb-6">
+          <div><label for="bookingName" class="block text-gray-400 text-sm mb-2">Your Name</label> <input type="text" id="bookingName" placeholder="John Doe" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+          </div>
+          <div><label for="bookingPhone" class="block text-gray-400 text-sm mb-2">Phone Number</label> <input type="tel" id="bookingPhone" placeholder="+27 XX XXX XXXX" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+          </div>
+          <div><label for="bookingAddress" class="block text-gray-400 text-sm mb-2">Service Location</label> <input type="text" id="bookingAddress" placeholder="Enter your address" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+           <div><label for="bookingDate" class="block text-gray-400 text-sm mb-2">Preferred Date</label> <input type="date" id="bookingDate" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white focus:outline-none input-glow transition-all" required>
+           </div>
+           <div><label for="bookingTime" class="block text-gray-400 text-sm mb-2">Preferred Time</label> <select id="bookingTime" class="w-full px-6 py-4 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white focus:outline-none input-glow transition-all" required> <option value="">Select time</option> <option value="08:00">08:00 AM</option> <option value="09:00">09:00 AM</option> <option value="10:00">10:00 AM</option> <option value="11:00">11:00 AM</option> <option value="12:00">12:00 PM</option> <option value="13:00">01:00 PM</option> <option value="14:00">02:00 PM</option> <option value="15:00">03:00 PM</option> <option value="16:00">04:00 PM</option> <option value="17:00">05:00 PM</option> </select>
+           </div>
+          </div>
+         </div><!-- Total -->
+         <div class="p-4 rounded-xl bg-[#0A0A0A] mb-6">
+          <div class="flex justify-between items-center"><span class="text-gray-400">Estimated Total</span> <span id="totalPrice" class="text-3xl font-black text-[#FFD300]">R0</span>
+          </div>
+         </div><button type="submit" class="w-full btn-yellow py-4 rounded-full font-bold text-[#0A0A0A] uppercase text-lg glow-yellow"> Confirm Booking </button>
+        </form>
+       </div><!-- Success Message -->
+       <div id="bookingSuccess" class="hidden glass-card p-8 rounded-3xl text-center">
+        <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#FFD300] flex items-center justify-center glow-yellow">
+         <svg class="w-10 h-10 text-[#0A0A0A]" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+         </svg>
+        </div>
+        <h3 class="text-2xl font-black text-white mb-2">Booking Confirmed!</h3>
+        <p class="text-gray-400 mb-4">Your car wash has been scheduled successfully.</p>
+        <p class="text-[#00CFFD] font-bold mb-6">Booking Code: <span id="bookingCode">PL-12345</span></p><button onclick="showSection('tracking')" class="btn-yellow px-8 py-3 rounded-full font-bold text-[#0A0A0A] uppercase"> Track Your Service </button>
+       </div>
+      </div>
+     </div>
+    </section><!-- CAREERS SECTION -->
+    <section id="careers" class="section-hidden">
+     <div class="bg-[#0A0A0A] min-h-screen py-16 sm:py-24 water-bg">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="text-center mb-12">
+        <h2 class="text-4xl sm:text-5xl font-black text-white mb-4">Join Our Team</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Be part of the best car wash team. We're always looking for talented, dedicated individuals to join our growing family.</p>
+       </div><!-- Search/Filter -->
+       <div class="glass-card p-4 sm:p-6 rounded-2xl mb-8">
+        <div class="flex flex-col sm:flex-row gap-4"><input type="text" id="jobSearch" placeholder="Search positions..." class="flex-1 px-6 py-3 rounded-full bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" onkeyup="filterJobs()"> <select id="locationFilter" class="px-6 py-3 rounded-full bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white focus:outline-none input-glow transition-all" onchange="filterJobs()"> <option value="">All Locations</option> <option value="johannesburg">Johannesburg</option> <option value="pretoria">Pretoria</option> <option value="cape-town">Cape Town</option> <option value="durban">Durban</option> </select>
+        </div>
+       </div><!-- Job Listings -->
+       <div id="jobListings" class="space-y-4">
+        <div class="job-card glass-card p-6 rounded-2xl card-hover" data-title="car wash technician" data-location="johannesburg">
+         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="flex-1">
+           <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-xl font-bold text-white">Car Wash Technician</h3><span class="px-3 py-1 rounded-full bg-[#00CFFD]/20 text-[#00CFFD] text-xs font-medium">Full-time</span>
+           </div>
+           <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm"><span class="flex items-center gap-1">
+             <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+             </svg> Johannesburg </span> <span class="flex items-center gap-1">
+             <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z" />
+             </svg> R8,000 - R12,000/month </span>
+           </div>
+          </div><button onclick="showJobApplication('Car Wash Technician')" class="btn-yellow px-6 py-3 rounded-full font-bold text-[#0A0A0A] uppercase text-sm whitespace-nowrap"> Apply Now </button>
+         </div>
+        </div>
+        <div class="job-card glass-card p-6 rounded-2xl card-hover" data-title="team supervisor" data-location="pretoria">
+         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="flex-1">
+           <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-xl font-bold text-white">Team Supervisor</h3><span class="px-3 py-1 rounded-full bg-[#FFD300]/20 text-[#FFD300] text-xs font-medium">Leadership</span>
+           </div>
+           <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm"><span class="flex items-center gap-1">
+             <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+             </svg> Pretoria </span> <span class="flex items-center gap-1">
+             <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z" />
+             </svg> R15,000 - R20,000/month </span>
+           </div>
+          </div><button onclick="showJobApplication('Team Supervisor')" class="btn-yellow px-6 py-3 rounded-full font-bold text-[#0A0A0A] uppercase text-sm whitespace-nowrap"> Apply Now </button>
+         </div>
+        </div>
+        <div class="job-card glass-card p-6 rounded-2xl card-hover" data-title="mobile driver" data-location="cape-town">
+         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="flex-1">
+           <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-xl font-bold text-white">Mobile Service Driver</h3><span class="px-3 py-1 rounded-full bg-[#00CFFD]/20 text-[#00CFFD] text-xs font-medium">Full-time</span>
+           </div>
+           <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm"><span class="flex items-center gap-1">
+             <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+             </svg> Cape Town </span> <span class="flex items-center gap-1">
+             <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z" />
+             </svg> R10,000 - R14,000/month </span>
+           </div>
+          </div><button onclick="showJobApplication('Mobile Service Driver')" class="btn-yellow px-6 py-3 rounded-full font-bold text-[#0A0A0A] uppercase text-sm whitespace-nowrap"> Apply Now </button>
+         </div>
+        </div>
+        <div class="job-card glass-card p-6 rounded-2xl card-hover" data-title="customer service" data-location="durban">
+         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="flex-1">
+           <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-xl font-bold text-white">Customer Service Representative</h3><span class="px-3 py-1 rounded-full bg-[#00CFFD]/20 text-[#00CFFD] text-xs font-medium">Full-time</span>
+           </div>
+           <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm"><span class="flex items-center gap-1">
+             <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+             </svg> Durban </span> <span class="flex items-center gap-1">
+             <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z" />
+             </svg> R9,000 - R11,000/month </span>
+           </div>
+          </div><button onclick="showJobApplication('Customer Service Representative')" class="btn-yellow px-6 py-3 rounded-full font-bold text-[#0A0A0A] uppercase text-sm whitespace-nowrap"> Apply Now </button>
+         </div>
+        </div>
+       </div><!-- Application Modal -->
+       <div id="applicationModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+        <div class="glass-card p-6 sm:p-8 rounded-3xl max-w-lg w-full max-h-[90%] overflow-y-auto">
+         <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl font-bold text-white">Apply for <span id="jobTitle">Position</span></h3><button onclick="closeApplicationModal()" class="text-gray-400 hover:text-white">
+           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+           </svg></button>
+         </div>
+         <form onsubmit="submitApplication(event)">
+          <div class="space-y-4">
+           <div><label for="appName" class="block text-gray-400 text-sm mb-2">Full Name</label> <input type="text" id="appName" placeholder="Your full name" class="w-full px-6 py-3 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+           <div><label for="appEmail" class="block text-gray-400 text-sm mb-2">Email Address</label> <input type="email" id="appEmail" placeholder="you@example.com" class="w-full px-6 py-3 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+           <div><label for="appPhone" class="block text-gray-400 text-sm mb-2">Phone Number</label> <input type="tel" id="appPhone" placeholder="+27 XX XXX XXXX" class="w-full px-6 py-3 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+           </div>
+           <div><label for="appExperience" class="block text-gray-400 text-sm mb-2">Relevant Experience</label> <textarea id="appExperience" rows="3" placeholder="Tell us about your experience..." class="w-full px-6 py-3 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all resize-none" required></textarea>
+           </div>
+           <div><label for="appWhy" class="block text-gray-400 text-sm mb-2">Why do you want to join us?</label> <textarea id="appWhy" rows="3" placeholder="Share your motivation..." class="w-full px-6 py-3 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all resize-none" required></textarea>
+           </div>
+          </div><button type="submit" class="w-full btn-yellow py-4 rounded-full font-bold text-[#0A0A0A] uppercase mt-6"> Submit Application </button>
+         </form>
+        </div>
+       </div><!-- Application Success -->
+       <div id="applicationSuccess" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+        <div class="glass-card p-8 rounded-3xl max-w-md w-full text-center">
+         <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#FFD300] flex items-center justify-center glow-yellow">
+          <svg class="w-10 h-10 text-[#0A0A0A]" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+          </svg>
+         </div>
+         <h3 class="text-2xl font-black text-white mb-2">Application Submitted!</h3>
+         <p class="text-gray-400 mb-6">Thank you for your interest. We'll review your application and get back to you soon.</p><button onclick="closeApplicationSuccess()" class="btn-yellow px-8 py-3 rounded-full font-bold text-[#0A0A0A] uppercase"> Close </button>
+        </div>
+       </div><!-- Booking Code Recovery Modal -->
+       <div id="codeRecoveryModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+        <div class="glass-card p-6 sm:p-8 rounded-3xl max-w-lg w-full max-h-[90%] overflow-y-auto">
+         <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl font-bold text-white">Find Your Booking Code</h3><button onclick="closeCodeRecoveryModal()" class="text-gray-400 hover:text-white">
+           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+           </svg></button>
+         </div><!-- Recovery Options -->
+         <div class="space-y-4"><!-- Option 1: Email -->
+          <div class="p-4 rounded-2xl bg-[#0A0A0A] border-2 border-[#1E1E1E] hover:border-[#00CFFD] transition-all cursor-pointer" onclick="switchRecoveryTab('email')">
+           <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-[#00CFFD]/20 flex items-center justify-center flex-shrink-0 mt-1">
+             <svg class="w-5 h-5 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+             </svg>
+            </div>
+            <div>
+             <p class="font-bold text-white">Check Your Email</p>
+             <p class="text-gray-400 text-sm">Your booking code was sent to your email when you made the reservation</p>
+            </div>
+           </div>
+          </div><!-- Option 2: Phone -->
+          <div class="p-4 rounded-2xl bg-[#0A0A0A] border-2 border-[#1E1E1E] hover:border-[#00CFFD] transition-all cursor-pointer" onclick="switchRecoveryTab('phone')">
+           <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-[#FFD300]/20 flex items-center justify-center flex-shrink-0 mt-1">
+             <svg class="w-5 h-5 text-[#FFD300]" fill="currentColor" viewbox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" />
+             </svg>
+            </div>
+            <div>
+             <p class="font-bold text-white">SMS to Your Phone</p>
+             <p class="text-gray-400 text-sm">We'll send your booking code via SMS to the phone number you provided</p>
+            </div>
+           </div>
+          </div><!-- Option 3: Account Lookup -->
+          <div class="p-4 rounded-2xl bg-[#0A0A0A] border-2 border-[#1E1E1E] hover:border-[#00CFFD] transition-all cursor-pointer" onclick="switchRecoveryTab('account')">
+           <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-[#00CFFD]/20 flex items-center justify-center flex-shrink-0 mt-1">
+             <svg class="w-5 h-5 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+             </svg>
+            </div>
+            <div>
+             <p class="font-bold text-white">Check Your Account</p>
+             <p class="text-gray-400 text-sm">Sign in to your account to view all your bookings and codes</p>
+            </div>
+           </div>
+          </div><!-- Option 4: Contact Support -->
+          <div class="p-4 rounded-2xl bg-[#0A0A0A] border-2 border-[#1E1E1E] hover:border-[#00CFFD] transition-all cursor-pointer" onclick="switchRecoveryTab('support')">
+           <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-[#FFD300]/20 flex items-center justify-center flex-shrink-0 mt-1">
+             <svg class="w-5 h-5 text-[#FFD300]" fill="currentColor" viewbox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12h-8v-2h8v2zm0-4h-8V8h8v2z" />
+             </svg>
+            </div>
+            <div>
+             <p class="font-bold text-white">Contact Our Support Team</p>
+             <p class="text-gray-400 text-sm">Speak with our friendly support team to retrieve your booking code</p>
+            </div>
+           </div>
+          </div>
+         </div><!-- Recovery Details -->
+         <div class="mt-6 pt-6 border-t border-[#1E1E1E]"><!-- Email Recovery -->
+          <div id="emailRecovery" class="space-y-4">
+           <h4 class="font-bold text-white">📧 Check Your Email</h4>
+           <div class="p-4 rounded-xl bg-[#0A0A0A] space-y-3">
+            <p class="text-gray-400 text-sm"><strong class="text-white">Step 1:</strong> Look for an email from "The Parking Lot Car Wash" in your inbox</p>
+            <p class="text-gray-400 text-sm"><strong class="text-white">Step 2:</strong> The email subject line contains your booking code (e.g., "Your Booking Confirmed - PL-12345")</p>
+            <p class="text-gray-400 text-sm"><strong class="text-white">Tip:</strong> Check your spam or promotions folder if you don't see it</p>
+           </div>
+          </div><!-- SMS Recovery -->
+          <div id="smsRecovery" class="hidden space-y-4">
+           <h4 class="font-bold text-white">📱 Receive SMS</h4>
+           <form onsubmit="handleSMSRecovery(event)" class="space-y-4">
+            <div><label for="recoveryPhone" class="block text-gray-400 text-sm mb-2">Phone Number</label> <input type="tel" id="recoveryPhone" placeholder="+27 XX XXX XXXX" class="w-full px-4 py-3 rounded-xl bg-[#0A0A0A] border-2 border-[#1E1E1E] text-white placeholder-gray-500 focus:outline-none input-glow transition-all" required>
+            </div><button type="submit" class="w-full btn-yellow py-3 rounded-full font-bold text-[#0A0A0A] uppercase text-sm"> Send Booking Code </button>
+           </form>
+          </div><!-- Account Lookup -->
+          <div id="accountRecovery" class="hidden space-y-4">
+           <h4 class="font-bold text-white">👤 Access Your Account</h4>
+           <div class="p-4 rounded-xl bg-[#0A0A0A] space-y-3">
+            <p class="text-gray-400 text-sm"><strong class="text-white">Step 1:</strong> Sign in to your account on our website</p>
+            <p class="text-gray-400 text-sm"><strong class="text-white">Step 2:</strong> Go to the "Account" section</p>
+            <p class="text-gray-400 text-sm"><strong class="text-white">Step 3:</strong> View "Recent Washes" or "Booking History" to find your code</p>
+           </div><button onclick="closeCodeRecoveryModal(); showSection('account')" class="w-full py-3 rounded-full border-2 border-[#00CFFD] text-[#00CFFD] font-bold uppercase text-sm hover:bg-[#00CFFD]/10 transition-all"> Go to Account </button>
+          </div><!-- Support -->
+          <div id="supportRecovery" class="hidden space-y-4">
+           <h4 class="font-bold text-white">☎️ Get Help from Support TEam</h4>
+           <div class="p-4 rounded-xl bg-[#0A0A0A] space-y-4">
+            <div>
+             <p class="text-gray-400 text-sm mb-2"><strong class="text-white">📞 Call Us:</strong></p><a href="tel:+27XXXXXXXXX" class="inline-flex items-center gap-2 text-[#FFD300] hover:underline font-medium">
+              <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg> +2763 804 6163 || +2779 920 8305 </a>
+            </div>
+            <div>
+             <p class="text-gray-400 text-sm mb-2"><strong class="text-white">✉️ Email Us:</strong></p><a href="mailto:support@theparkinglot.co.za" class="inline-flex items-center gap-2 text-[#FFD300] hover:underline font-medium">
+              <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg> support@theparkinglot.co.za </a>
+            </div>
+            <p class="text-gray-400 text-xs">Available 24/7. Have your phone number and booking date ready to help us find your code quickly.</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- FOOTER -->
+    <footer class="bg-[#0A0A0A] border-t border-[#1E1E1E] py-12">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8"><!-- Brand -->
+       <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+         <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#00CFFD] to-[#0088AA] flex items-center justify-center">
+          <svg class="w-6 h-6" fill="#0A0A0A" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+          </svg>
+         </div>
+         <div>
+          <h3 class="text-lg font-extrabold text-white">THE PARKING LOT</h3>
+          <p class="text-xs text-[#00CFFD]">CAR WASH</p>
+         </div>
+        </div>
+        <p class="text-gray-400 text-sm max-w-md">Premium mobile car wash services. We bring the shine to your driveway with eco-friendly products and professional care.</p>
+       </div><!-- Quick Links -->
+       <div>
+        <h4 class="text-white font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+         <li><button onclick="showSection('services')" class="text-gray-400 hover:text-[#00CFFD] text-sm transition-colors">Services &amp; Pricing</button></li>
+         <li><button onclick="showSection('booking')" class="text-gray-400 hover:text-[#00CFFD] text-sm transition-colors">Book a Wash</button></li>
+         <li><button onclick="showSection('tracking')" class="text-gray-400 hover:text-[#00CFFD] text-sm transition-colors">Track Service</button></li>
+         <li><button onclick="showSection('careers')" class="text-gray-400 hover:text-[#00CFFD] text-sm transition-colors">Careers</button></li>
+        </ul>
+       </div><!-- Contact -->
+       <div>
+        <h4 class="text-white font-bold mb-4">Contact Us</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+         <li class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg> +27 739 20 8305 || +2767 084 6163</li>
+         <li class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#00CFFD]" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg> info@theparkinglot.co.za</li> 
+        </ul>
+       </div>
+      </div>
+      <div class="border-t border-[#1E1E1E] mt-8 pt-8 text-center">
+       <p class="text-gray-500 text-sm">© 2024 The Parking Lot Car Wash. All rights reserved.</p>
+      </div>
+     </div>
+    </footer>
+   </main>
+  </div>
+
+    <script src="/javascript/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
